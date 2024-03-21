@@ -1,5 +1,3 @@
-Based on the files you've uploaded, here's a draft for your GitHub README that outlines the structure and purpose of your project. This draft assumes your project is related to job application processing and ranking, utilizing Azure's AI and MongoDB for document analysis and storage. Feel free to customize it further to fit your project's specific details and features.
-
 ```markdown
 # Job Application Processing and Ranking System
 
@@ -71,5 +69,3 @@ aoai_client, document_analysis_client, mongo_client, model = initialize_clients(
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-Remember to include any additional instructions or details specific to your project, such as how to run specific scripts or tests, in the README.
