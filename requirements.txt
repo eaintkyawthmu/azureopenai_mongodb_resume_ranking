@@ -1,0 +1,8 @@
+python-dotenv
+azure-ai-formrecognizer
+azure-core
+openai
+pymongo
+numpy
+logging
+Flask
