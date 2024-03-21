@@ -1,8 +1,19 @@
-```markdown
-# Job Application Processing and Ranking System
+# Job Application Processing and Ranking System 
 
 This repository contains the code for a system designed to process and rank job applications using Azure's AI for document analysis and MongoDB for data storage. The system extracts information from resumes and job descriptions, generates embeddings for textual content, and ranks resumes based on their relevance to a given job description.
 
+It is a Flask application that processes and ranks resumes based on job descriptions. It uses Azure's Document Analysis Client for document processing, and a MongoDB database for storing job descriptions and resumes. The application also generates embeddings for the processed documents using a pre-trained model, and ranks resumes based on these embeddings.
+
+## Features
+
+- Upload job descriptions and resumes in PDF format.
+- Process and store job descriptions and resumes in a MongoDB database.
+- Generate embeddings for the processed documents using a pre-trained model.
+- Rank resumes based on these embeddings.
+
+## Installation
+
+1. Clone the repository:
 ## Overview
 
 The system is composed of several key components:
@@ -37,6 +48,7 @@ pip install -r requirements.txt
 ```
 
 3. Set up a `.env` file with your Azure and MongoDB credentials:
+ You'll need to provide your Azure and MongoDB credentials.
 
 ```
 OPENAI_API_KEY=your_openai_api_key
@@ -52,20 +64,15 @@ COSMOS_DB_MONGO_SERVER=your_mongodb_server
 
 ### Usage
 
-1. Initialize the system by loading the configuration and setting up the database and AI clients:
+1. Run the Flask application:
+2. Open your web browser and navigate to `http://localhost:5111`.
+3. Use the upload forms to upload job descriptions and resumes.
+4. The application will process the documents, generate embeddings, and rank the resumes.
 
-```python
-from config import load_config, initialize_clients
+## Contributing
 
-config = load_config(".env")
-aoai_client, document_analysis_client, mongo_client, model = initialize_clients(config)
-```
-
-2. Process job descriptions and resumes using the `doc_processing` module.
-3. Use the `database_utils` module to upload documents and their embeddings to MongoDB.
-4. Rank resumes for a given job description using the `vector_operations` module.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
